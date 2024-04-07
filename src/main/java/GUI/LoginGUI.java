@@ -216,6 +216,7 @@ public class LoginGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnLoginActionPerformed
 
+
     private void closeProgramBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeProgramBtnActionPerformed
         // TODO add your handling code here:
         this.dispose();

@@ -15,6 +15,10 @@ public class Subject {
     private int numberOfLesson;
 
     public Subject() {
+//        this.subjectID = "";
+//        this.subjectName = "";
+//        this.coefficient = 0;
+//        this.numberOfLesson = 0;
     }
 
     public Subject(String subjectID, String subjectName, int coefficient, int numberOfLesson) {
