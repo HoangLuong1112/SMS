@@ -87,23 +87,40 @@ public class SubjectDAO extends DatabaseConnection {
         return result;
     }
 
-    public boolean deleteSubject(Subject subject) {
-        boolean result = false;
-        open();
-        String sql = "DELETE FROM [Subject] WHERE Subject_ID = ?";
-        try {
-            PreparedStatement pstm = conn.prepareStatement(sql);
-            pstm.setString(1, subject.getSubjectID());
-            int n = pstm.executeUpdate();
-            if (n > 0) {
-                result = true;
-            }
-
-        } catch (SQLException ex) {
-            System.out.println("Error : " + ex.toString());
+//    public boolean deleteSubject(Subject subject) {
+//        boolean result = false;
+//        open();
+//        String sql = "DELETE FROM [Subject] WHERE Subject_ID = ?";
+//        try {
+//            PreparedStatement pstm = conn.prepareStatement(sql);
+//            pstm.setString(1, subject.getSubjectID());
+//            int n = pstm.executeUpdate();
+//            if (n > 0) {
+//                result = true;
+//            }
+//
+//        } catch (SQLException ex) {
+//            System.out.println("Error : " + ex.toString());
+//        }
+//        return result;
+//    }
+public boolean deleteSubject(Subject subject) {
+    boolean result = false;
+    open();
+    String sql = "DELETE FROM [Subject] WHERE Subject_ID = ?";
+    try {
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        pstm.setString(1, subject.getSubjectID());
+        int n = pstm.executeUpdate();
+        if (n > 0) {
+            result = true;
         }
-        return result;
+
+    } catch (SQLException ex) {
+        System.out.println("Error : " + ex.toString());
     }
+    return result;
+}
 
     public Subject getSubjectByID(String subjectID) {
         ArrayList<Subject> subjectList = getAllSubjects();
