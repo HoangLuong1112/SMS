@@ -6,7 +6,7 @@ package GUI;
 
 import com.formdev.flatlaf.intellijthemes.FlatDarkPurpleIJTheme;
 
-import javax.swing.UIManager;//tk: QuachQuy mk: 123456
+import javax.swing.UIManager;
 
 /**
  *

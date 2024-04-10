@@ -60,7 +60,6 @@ public class TestEditSubject {
     }
     @Test
     public void testNumberOfLessonValue(){
-<<<<<<< Updated upstream
         Subject subject = new Subject("MH336", "Toán Cao Rời R", 2, 75);
         assertFalse(subjectBUS.editSubject(subject));
     }
@@ -68,10 +67,5 @@ public class TestEditSubject {
     public void testEditSubject(){
         Subject subject = new Subject("MH001", "Toán Cao Ka2", 2, 45);
         assertTrue(subjectBUS.editSubject(subject));
-=======
-        // Kiểm tra số tiết
-        int numberOfLession = subject.getNumberOfLesson();
-        assertTrue(numberOfLession >= 30 && numberOfLession <= 60);
->>>>>>> Stashed changes
     }
 }
